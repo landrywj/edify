@@ -25,9 +25,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+#User Management
+gem 'devise'
 
 # Use Puma as the app server
- gem 'puma', group: :production
+gem 'puma', group: :production
 
 group :development do
  gem 'capistrano-rails'
