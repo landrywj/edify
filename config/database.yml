@@ -27,10 +27,9 @@ development:
   adapter: postgresql
   encoding: utf8
   database: edify_development
-  username: atlaswarner
+  username: landrywj
   password: Rails.application.secrets.db_password
-  host: 10.0.1.22
-  port: 5432
+  host: localhost
   pool: 10
 
   # The specified database role being used to connect to postgres.
