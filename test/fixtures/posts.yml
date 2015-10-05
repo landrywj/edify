@@ -2,6 +2,8 @@
 
 one:
   body: MyTextForTheFirstPost
+  user: :one
 
 two:
   body: MyTextForTheSecondPost
+  user: :two

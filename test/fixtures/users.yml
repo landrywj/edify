@@ -10,3 +10,18 @@ one:
 two: 
   email: "support@edify.online"
   encrypted_password: "secret123"
+three:
+  email: "student@edify.online"
+  encrypted_password: "secret123"
+four: 
+  email: "parent@edify.online"
+  encrypted_password: "secret123"
+five:
+  email: "educator@edify.online"
+  encrypted_password: "secret123"
+six:
+  email: "administrator@edify.online"
+  encrypted_password: "secret123"
+seven: 
+  email: "it@edify.online"
+  encrypted_password: "secret123"
