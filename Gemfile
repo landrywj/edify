@@ -8,7 +8,7 @@ gem 'pg'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'turbolinks'
-
+gem 'therubyracer', platforms: :ruby
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -18,12 +18,13 @@ gem 'sdoc', group: :doc
 gem 'devise'
 
 # Use Puma as the app server
-gem 'puma', group: :production
+gem 'passenger'
 
 group :development do
-  gem 'capistrano-rails'
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-passenger'
   gem 'capistrano-chruby'
-  gem 'capistrano3-puma'
   gem 'web-console', '~> 2.0'
   gem 'byebug'
 end
