@@ -8,9 +8,7 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
     <%= stylesheet_link_tag "application", :media => "all" %>
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<%= javascript_include_tag "application" %>
+     <%= javascript_include_tag "application" %>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
@@ -25,6 +23,9 @@
         </button>
         <a class="navbar-brand" href="/">EDIFY</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="/"><i class="fa fa-home"></i></a></li>    
+        </ul>
           <ul class="nav navbar-nav navbar-right">
              <% if user_signed_in? %>
 			<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
@@ -43,7 +44,7 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Resources</h3>
+            <h3>Dev Resources</h3>
             <ul class="nav nav-list">
               <li class="nav-header">Indexes</li>
                <li><%= link_to "Posts", posts_path %></li>
@@ -58,10 +59,10 @@
       </div><!--/row-->
 
       <footer class="navbar-nav navbar-fixed-bottom">
-        <div class="navbar-nav navbar-right"><a href="#">&copy; Edify LLC 2015</a></div>
+        <div class="navbar-nav navbar-right"><a href="#">&copy; Edify Online, LLC 2015</a></div>
       </footer>
 
     </div> <!-- /container -->
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </body>
 </html>

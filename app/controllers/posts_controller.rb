@@ -9,6 +9,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @commentable = @post
+    @comments = @commentable.comments.order(created_at: :desc)
+ 
     respond_with(@post)
   end
 

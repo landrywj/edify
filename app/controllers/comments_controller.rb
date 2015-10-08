@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user = current_user
     @comment.save
-    respond_with(@comment)
+      respond_with(@comment.commentable)
   end
 
   def update

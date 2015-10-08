@@ -15,19 +15,8 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :commentable_id %><br>
-    <%= f.text_field :commentable_id %>
-  </div>
-
-  <div class="field">
-      <%= f.label :commentable_type %><br>
-      <%= f.text_field :commentable_type %>
-  </div>
+<%= f.hidden_field :commentable_type, :value => params[:controller].capitalize.singularize %>
+<%= f.hidden_field :commentable_id, :value => params[:id] %>
   <div class="actions">
     <%= f.submit %>
   </div>

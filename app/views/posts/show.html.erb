@@ -1,13 +1,9 @@
 <%- model_class = Post -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
+<article>
+<%= @post.body %>
+</article>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
-  <dd><%= @post.body %></dd>
-</dl>
-
+<% if @post.user_id == current_user.id %>
 <%= link_to t('.back', :default => t("helpers.links.back")),
               posts_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -17,3 +13,14 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+<% end %>
+
+<hr>
+<h5>Comments</h5>
+
+<% @comments.each do |comment| %>
+<p><%= comment.body %></p>
+<cite>by <%= comment.user.email %></cite>
+<% end %>
+
+<%= render 'comments/polyform' %>
