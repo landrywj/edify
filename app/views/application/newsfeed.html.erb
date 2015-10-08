@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>  
+    <div class="well">
+        <date><%= post.created_at.to_formatted_s(:short) %></date> - <cite>Posted by: <%= post.user.email %></cite>
+        <p><%= link_to post.body, post_path(post) %></p>
+        <span class="badge"><%= post.comments.count %> Comments</span>
+    </div>
+<% end %>
