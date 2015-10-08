@@ -12,9 +12,10 @@ class PostTest < ActiveSupport::TestCase
   end 
   
   test "Post must have a Creator" do
-    post = Post.new(user_id: nil)
+      post = Post.create(user_id: nil)
     assert post.invalid?
     assert post.errors[:user_id].any? 
    end
+
     
 end

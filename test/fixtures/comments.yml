@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: Hello World
+  user_id: 1
+  commentable_id: 1
+  commentable_type: Post
+
+two:
+  body: Ciao Mondo
+  user_id: 2
+  commentable_id: 2
+  commentable_type: Post
+  

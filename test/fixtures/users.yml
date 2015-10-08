@@ -25,3 +25,4 @@ six:
 seven: 
   email: "it@edify.online"
   encrypted_password: "secret123"
+  

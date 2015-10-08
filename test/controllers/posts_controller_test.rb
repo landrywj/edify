@@ -1,9 +1,12 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers                          
+  include Warden::Test::Helpers 
 
   setup do
     @post = posts(:one)
+    @current_user = sign_in User.first
   end
   
   test "should get index" do
@@ -18,10 +21,9 @@ class PostsControllerTest < ActionController::TestCase
   end
   
   test "should create post" do
-    assert_difference('Post.count') do
-      post :create, post: { body: @post.body }
-    end
-  
+      assert_difference('Post.count') do
+          post :create, post: { body: @post.body, user_id: 1 }   
+      end
     assert_redirected_to post_path(assigns(:post))
   end
   
