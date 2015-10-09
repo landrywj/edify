@@ -27,8 +27,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: edify_development
-  username: Rails.application.secrets.db_username
-  password: Rails.application.secrets.db_password
+  username: landrywj
   host: localhost
   pool: 10
 
