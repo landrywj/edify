@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :buildings
+
+  resources :rooms
+
+  resources :educators
+
+  resources :courses
+
+  resources :students
+
   devise_for :users
   resources :comments
   resources :posts do

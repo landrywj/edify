@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @educator.title %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @educator.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @educator.last_name %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @educator.job_title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @educator.summary %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @educator.dob %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @educator.ssn %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @educator.gender %>
+</p>
+
+<p>
+  <strong>Ethnicity:</strong>
+  <%= @educator.ethnicity %>
+</p>
+
+<%= link_to 'Edit', edit_educator_path(@educator) %> |
+<%= link_to 'Back', educators_path %>
