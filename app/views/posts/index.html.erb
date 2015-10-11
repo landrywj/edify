@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to post.id, post_path(post) %></td>
         <td><%= post.body %></td>
-        <td><%=l post.created_at %></td>
+        <td><%= post.created_at.to_formatted_s(:short) %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_post_path(post), :class => 'btn btn-default btn-xs' %>

@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'New Educator', new_educator_path, :class=>"btn btn-primary pull-right" %>
 
-<h1>Listing Educators</h1>
+<h1><i class="fa fa-apple"></i> Educators</h1>
 
 <table>
   <thead>
@@ -8,13 +8,7 @@
       <th>Title</th>
       <th>First name</th>
       <th>Last name</th>
-      <th>Job title</th>
-      <th>Summary</th>
-      <th>Dob</th>
-      <th>Ssn</th>
-      <th>Gender</th>
-      <th>Ethnicity</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -24,20 +18,10 @@
         <td><%= educator.title %></td>
         <td><%= educator.first_name %></td>
         <td><%= educator.last_name %></td>
-        <td><%= educator.job_title %></td>
-        <td><%= educator.summary %></td>
-        <td><%= educator.dob %></td>
-        <td><%= educator.ssn %></td>
-        <td><%= educator.gender %></td>
-        <td><%= educator.ethnicity %></td>
         <td><%= link_to 'Show', educator %></td>
         <td><%= link_to 'Edit', edit_educator_path(educator) %></td>
-        <td><%= link_to 'Destroy', educator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Educator', new_educator_path %>
