@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootswatch_readable.min
+ *= require font-awesome.min
  *= require_tree .
  *= require_self
  */

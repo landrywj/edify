@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
     <meta charset="utf-8">
+    <meta lang="en">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Edify" %></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Edify</title>
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag '/favicon.ico', :rel => 'shortcut icon' %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-<!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <% render 'favicons' %>
   </head>
   <body>
-    <%= render 'top_nav' %>
+      <%= render 'top_nav' %>
     <div class="container">
       <div class="row">
           <%= yield %>
       </div><!--/row-->
-
-      <footer class="navbar-nav navbar-inverted">
-        <div class="navbar-nav navbar-right"><a href="#">&copy; Edify Online, LLC 2015</a></div>
-      </footer>
+        
+        <hr>
+        
+        <%= render 'footer' %>
 
     </div> <!-- /container -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </body>
 </html>
