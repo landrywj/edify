@@ -10,12 +10,12 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <% render 'favicons' %>
+    <%= render 'favicons' %>
   </head>
   <body>
       <%= render 'top_nav' %>
     <div class="container">
-      <div class="row">
+      <div class="col-xs-12">
           <%= yield %>
       </div><!--/row-->
         
