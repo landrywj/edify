@@ -27,6 +27,7 @@ group :development do
   gem 'capistrano-chruby'
   gem 'web-console', '~> 2.0'
   gem 'byebug'
+  gem 'rubocop', require: false
 end
 
 group :test do 

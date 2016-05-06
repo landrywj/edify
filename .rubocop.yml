@@ -1,0 +1,16 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/migrate/*'
+    - 'db/*'
+    - 'spec/cassettes/*'
+    - 'lib/*'
+Style/Encoding:
+      Enabled: true
+Metrics/LineLength:
+  Max: 150
+Rails:
+  Enabled: true
