@@ -17,7 +17,7 @@ gem 'sdoc', group: :doc
 #User Management
 gem 'devise'
 
-# Use Puma as the app server
+# Use Passenger as the app server
 gem 'passenger'
 
 group :development do
@@ -29,5 +29,14 @@ group :development do
   gem 'byebug'
 end
 
-
+group :test do 
+  #Describe how your code should work with RSpec
+  gem 'rspec-rails'
+  #Simulate user interaction for testing with Capybara
+  gem 'capybara'
+  #Record and test your HTTP interactions 
+  gem 'vcr'
+  #Stub and mocking library used by vcr
+  gem 'webmock'
+end 
 

@@ -1,0 +1,5 @@
+admin:
+	email: admin@edify.online
+	encrypted_password: secret123
+	role: admin
+	
