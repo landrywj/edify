@@ -62,13 +62,14 @@ class EducatorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_educator
-      @educator = Educator.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def educator_params
-      params.require(:educator).permit(:title, :first_name, :last_name, :job_title, :summary, :dob, :ssn, :gender, :ethnicity)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_educator
+    @educator = Educator.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def educator_params
+    params.require(:educator).permit(:title, :first_name, :last_name, :job_title, :summary, :dob, :ssn, :gender, :ethnicity)
+  end
 end

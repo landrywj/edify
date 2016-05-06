@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user = current_user
     @comment.save
-      respond_with(@comment.commentable)
+    respond_with(@comment.commentable)
   end
 
   def update
@@ -38,11 +38,12 @@ class CommentsController < ApplicationController
   end
 
   private
-    def set_comment
-      @comment = Comment.find(params[:id])
-    end
 
-    def comment_params
-      params.require(:comment).permit(:body, :user_id, :commentable_id, :commentable_type)
-    end
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:body, :user_id, :commentable_id, :commentable_type)
+  end
 end

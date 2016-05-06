@@ -1,17 +1,16 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { :host => "https://atlaswarner/edify" }
-
-
-    config.action_mailer.smtp_settings = {
-      :address   => "smtp.mandrillapp.com",
-      :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
-      :enable_starttls_auto => true, # detects and uses STARTTLS
-      :user_name => "info@atlaswarner.com",
-      :password  => "l_GnEbaBhFmaPoxBtikHWQ", # SMTP password is any valid API key
-      :authentication => 'login', # Mandrill supports 'plain' or 'login'
-      :domain => 'atlaswarner.com', # your domain to identify your server when connecting
-    }
+  config.action_mailer.default_url_options = { host: 'https://edify.online' }
+  # SMTP settings for Action Mailer to interact with Mandrill.
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mandrillapp.com',
+    port: 587, # ports 587 and 2525 are also supported with STARTTLS
+    enable_starttls_auto: true, # detects and uses STARTTLS
+    user_name: Rails.application.secrets.mandrill_username,
+    password: Rails.application.secrets.mandrill_password,
+    authentication: 'login', # Mandrill supports 'plain' or 'login'
+    domain: 'edify.online', # your domain to identify your server when connecting
+  }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -50,7 +49,7 @@ Rails.application.configure do
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
