@@ -1,3 +1,6 @@
-new_student:
+new:
   first_name: Jon
   last_name: Conner
+transfer:
+  first_name: Chuck
+  last_name: Todd

@@ -1,3 +1,4 @@
 example_id                                            | status | run_time        |
 ----------------------------------------------------- | ------ | --------------- |
-./spec/controllers/students_controller_spec.rb[1:1:1] | failed | 0.05349 seconds |
+./spec/controllers/students_controller_spec.rb[1:1:1] | passed | 0.13398 seconds |
+./spec/requests/vcr_spec.rb[1:1]                      | passed | 2.82 seconds    |

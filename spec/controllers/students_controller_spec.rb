@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe StudentsController do
-    
+  fixtures :users, :students
   let(:valid_session) { sign_in users(:admin) }
   let(:valid_attributes) {{first_name: "Susan", last_name: "Noetal"}}
   

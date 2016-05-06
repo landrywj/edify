@@ -1,5 +1,16 @@
 admin:
-	email: admin@edify.online
-	encrypted_password: secret123
-	role: admin
-	
+  email: admin@edify.online
+  encrypted_password: secret123
+  role: admin
+educator:
+  email: educator@edify.online
+  encrypted_password: secret123
+  role: educator
+guardian: 
+  email: guardian@edify.online
+  encrypted_password: secret123
+  role: guardian
+student: 
+  email: student@edify.online
+  encrypted_password: secret123
+  role: student
