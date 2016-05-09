@@ -1,0 +1,9 @@
+one:
+  name: Summer 2016
+  start_date: Tue, 21 Jun 2016
+  end_date: Fri, 19 Aug 2016
+
+two:
+  name: Fall 2016
+  start_date: 21 Sep 2016
+  end_date: 21 Dec 2016
