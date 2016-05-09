@@ -1,0 +1,36 @@
+
+<h1><i class="fa fa-server"></i> Course Offerings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Course</th>
+      <th>Credits</th>
+      <th>Format</th>
+      <th>Building</th>
+      <th>Room</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offerings.each do |offering| %>
+      <tr>
+        <td><%= offering.semester %></td>
+        <td><%= offering.course %></td>
+        <td><%= offering.credits %></td>
+        <td><%= offering.format %></td>
+        <td><%= offering.building_id %></td>
+        <td><%= offering.room_id %></td>
+        <td><%= link_to 'Show', offering %></td>
+        <td><%= link_to 'Edit', edit_offering_path(offering) %></td>
+        <td><%= link_to 'Destroy', offering, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Offering', new_offering_path %>

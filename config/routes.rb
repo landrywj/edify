@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-
   root 'application#newsfeed'
   devise_for :users
   get '/accounts' => 'application#accounts'
@@ -8,6 +6,7 @@ Rails.application.routes.draw do
   resources :rooms
   resources :educators
   resources :semesters
+  resources :offerings
   resources :courses
   resources :students
   resources :comments
