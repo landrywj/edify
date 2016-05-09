@@ -28,16 +28,16 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'byebug'
   gem 'rubocop', require: false
+  gem 'rspec-rails'
 end
 
-group :test do 
+group :test do
   #Describe how your code should work with RSpec
   gem 'rspec-rails'
   #Simulate user interaction for testing with Capybara
   gem 'capybara'
-  #Record and test your HTTP interactions 
+  #Record and test your HTTP interactions
   gem 'vcr'
   #Stub and mocking library used by vcr
   gem 'webmock'
-end 
-
+end

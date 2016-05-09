@@ -9,37 +9,35 @@
     <a href="/"><%= image_tag 'apple-icon-72x72.png', :class=>"navbar-brand" %></a>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
-       <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <% if user_signed_in? %>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-university"></i> Campus<span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
+        </a>
+        <ul class="dropdown-menu">
           <li><%= link_to buildings_path do %><i class="fa fa-building"></i> Buildings<% end %></li>
           <li><%= link_to rooms_path do %><i class="fa fa-square-o"></i> Rooms<% end %></li>
-      </ul>
+        </ul>
       </li>
-        <li><%= link_to students_path do %><i class="fa fa-mortar-board"></i> Students<% end %></li>
-        <li><%= link_to educators_path  do %><i class="fa fa-apple"></i> Educators<% end %></li>
-        <li><%= link_to courses_path do %><i class="fa fa-book"></i> Courses<% end %></li>
+      <li><%= link_to students_path do %><i class="fa fa-user"></i> Students<% end %></li>
+      <li><%= link_to educators_path  do %><i class="fa fa-apple"></i> Educators<% end %></li>
+      <li><%= link_to courses_path do %><i class="fa fa-book"></i> Courses<% end %></li>
+      <li><%= link_to semesters_path do %><i class="fa fa-leaf"></i> Semesters<% end %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-
       <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-cogs"></i><span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><%= link_to "Users", "/accounts" %></li>
-        <li><%= link_to "Posts", posts_path %></li>
-        <li><%= link_to "Comments", comments_path %></li>
-      </ul>
+        </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Users", "/accounts" %></li>
+            <li><%= link_to "Posts", posts_path %></li>
+            <li><%= link_to "Comments", comments_path %></li>
+          </ul>
       </li>
-        <% if user_signed_in? %>
       <li><%= link_to destroy_user_session_path, :method => :delete do %><i class="fa fa-sign-out"></i><% end %></li>
-        <% else %>
-      <li><%= link_to('Login', new_user_session_path)  %></li>
-        <% end %>
     </ul>
+    <% end %>
    </div>
 </div>
 </div>
