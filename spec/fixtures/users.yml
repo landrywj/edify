@@ -1,3 +1,7 @@
+info:
+  email: info@edify.online
+  encrypted_password: <%= User.new.send(:password_digest, 'secret123') %>
+  role: info
 admin:
   email: admin@edify.online
   encrypted_password: secret123

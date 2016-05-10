@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe SemestersController, type: :controller do
  fixtures :users
   # This should return the minimal set of attributes required to create a valid

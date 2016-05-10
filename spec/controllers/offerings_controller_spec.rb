@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe OfferingsController do
   fixtures :semesters, :courses, :users
 

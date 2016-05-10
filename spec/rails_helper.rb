@@ -6,6 +6,7 @@ require 'spec_helper'
 require 'devise'
 require 'vcr'
 require 'webmock/rspec'
+require 'capybara/rspec'
 
 ActiveRecord::Migration.maintain_test_schema!
 
