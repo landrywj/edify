@@ -16,7 +16,7 @@ RSpec.configure do |config|
   # Run specs in random order to surface order dependencies.
   config.order = :random
   # Allows RSpec to persist some state between runs in order to support the `--only-failures` and `--next-failure` CLI options.
-  config.example_status_persistence_file_path = 'spec/examples.txt'
+  config.example_status_persistence_file_path = 'spec/specs.txt'
   # Allow more verbose output when running an individual spec file.
   if config.files_to_run.one?
     # Use the documentation formatter for detailed output, unless a formatter has already been configured via a command-line flag.
