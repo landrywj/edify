@@ -1,6 +1,6 @@
-RSpec.describe "Login" do 
-  fixtures :users
-    it "allows a user to login" do 
+RSpec.describe "Login" do
+  fixtures :users, :posts
+    it "allows a user to login" do
       visit '/users/sign_in'
       within("form") do
         fill_in 'Email', :with => 'info@edify.online'

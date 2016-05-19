@@ -29,6 +29,8 @@ group :development do
   gem 'byebug'
   gem 'rubocop', require: false
   gem 'rspec-rails'
+  #Automate testing in development with Guard
+  gem 'guard-rspec', require: false
 end
 
 group :test do

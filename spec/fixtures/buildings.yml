@@ -1,13 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
+  name: Arnold Athletic Center
   description: MyText
-  latitude: 1.5
-  longitude: 
+  latitude: 45.01
+  longitude: 120.1
 
 two:
-  name: MyString
+  name: Callahan Social Sciences Building
   description: MyText
-  latitude: 1.5
-  longitude: 
+  latitude: 45.02
+  longitude: 120.2

@@ -1,0 +1,32 @@
+biology:
+  semester: one
+  course: one
+  building: one
+  room: one
+  credits: 3
+  format: classroom
+chemistry:
+  semester: one
+  course: two
+  building: one
+  room: two
+  credits: 3
+  format: classroom
+math:
+  semester: one
+  course: three
+  building: one
+  room: three
+  credits: 4
+  format: classroom
+
+
+
+#   t.integer  "semester_id"
+#   t.integer  "course_id"
+#   t.integer  "credits"
+#   t.string   "format"
+#   t.integer  "building_id"
+#   t.integer  "room_id"
+#   t.datetime "created_at",  null: false
+#   t.datetime "updated_at",  null: false

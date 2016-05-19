@@ -1,11 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Room101
   subsection: MyString
-  capacity: 1
-
+  capacity: 11
 two:
-  name: MyString
+  name: Room102
   subsection: MyString
-  capacity: 1
+  capacity: 21
+three:
+  name: Room103
+  subsection: MyString
+  capacity: 31

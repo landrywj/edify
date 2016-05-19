@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    respond_with(@post)
+    redirect_to posts_url
   end
 
   private
