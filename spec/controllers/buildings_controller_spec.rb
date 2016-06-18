@@ -1,4 +1,3 @@
-require 'spec_helper'
 RSpec.describe BuildingsController, type: :controller do
   fixtures :users
 

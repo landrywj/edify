@@ -21,7 +21,7 @@ RSpec.describe OfferingsController do
     it "assigns all offerings as @offerings" do
       offering = Offering.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:offerings)).to eq([offering])
+      expect(assigns(:offerings)).to include(offering)
     end
   end
 

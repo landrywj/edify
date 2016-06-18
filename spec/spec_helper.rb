@@ -1,3 +1,10 @@
+require File.expand_path('../../config/environment', __FILE__)
+require 'rspec/rails'
+require 'devise'
+require 'vcr'
+require 'webmock/rspec'
+require 'capybara/rspec'
+
 RSpec.configure do |config|
   # rspec-expectations config goes here.
   config.expect_with :rspec do |expectations|
@@ -34,3 +41,14 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: 'controller'
 end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+ActiveRecord::Migration.maintain_test_schema!
+
+# Configure VCR to perform and record API requests
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+end
+
+ENV['RAILS_ENV'] ||= 'test'
+abort('The Rails environment is running in production mode!') if Rails.env.production?

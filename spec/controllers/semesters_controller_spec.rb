@@ -20,7 +20,7 @@ RSpec.describe SemestersController, type: :controller do
     it "assigns all semesters as @semesters" do
       semester = Semester.create! valid_attributes
       get :index, {}, valid_session
-      expect(Semester.count).to eq(3)
+      expect(assigns(:semesters)).to include(semester)
     end
   end
 
