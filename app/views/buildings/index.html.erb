@@ -11,13 +11,11 @@
 
   <tbody>
     <% @buildings.each do |building| %>
-      <tr>
-        <td><%= building.name %></td>
-        <td><%= link_to 'Show', building %></td>
-        <td><%= link_to 'Edit', edit_building_path(building) %></td>
-      </tr>
+    <tr>
+      <td><%= building.name %></td>
+      <td><%= link_to 'Show', building %></td>
+      <td><%= link_to 'Edit', edit_building_path(building) %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
-
-
