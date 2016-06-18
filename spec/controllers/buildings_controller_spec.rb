@@ -1,4 +1,5 @@
-RSpec.describe BuildingsController do
+require 'spec_helper'
+RSpec.describe BuildingsController, type: :controller do
   fixtures :users
 
   # This should return the minimal set of attributes required to create a valid
