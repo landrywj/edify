@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.5.0'
 
 set :application, 'edify'
 
@@ -22,7 +22,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :default_env, path: '/opt/ruby/bin:$PATH'
 
 namespace :deploy do
-  
+
   desc 'Create, migrate and seed the database'
   task :database_setup do
     on roles(:db) do
