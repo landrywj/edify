@@ -6,17 +6,20 @@ default: &default
 development:
   <<: *default
   database: edify_development
-  username: landrywj
+  username: <%= Rails.application.secrets.db_username %>
+  password: <%= Rails.application.secrets.db_password %>
   host: localhost
-  
+
 test:
   <<: *default
   database: edify_test
-  username: landrywj
+  username: postgres
   host: localhost
+  username: <%= Rails.application.secrets.db_username %>
+  password: <%= Rails.application.secrets.db_password %>
 
 production:
   <<: *default
   database: edify_production
-  username: Rails.application.secrets.db_username
-  password: Rails.application.secrets.db_password
+  username: <%= Rails.application.secrets.db_username %>
+  password: <%= Rails.application.secrets.db_password %>
