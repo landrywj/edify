@@ -11,3 +11,4 @@
 #  username: <%= "user#{n}" %>
 #  email: <%= "user#{n}@example.com" %>
 #<% end %>
+User.create(email: "admin@edify.online", password: "educatus", password_confirmation: "educatus")
